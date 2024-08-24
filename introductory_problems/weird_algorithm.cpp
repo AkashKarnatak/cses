@@ -1,11 +1,15 @@
-#include <stdint.h>
-#include <stdio.h>
+#include <cstdint>
+#include <iostream>
+
+using namespace std;
 
 int main() {
   int64_t n;
-  scanf("%ld", &n);
+  cin >> n;
+
   for (;;) {
-    printf("%ld\n", n);
+    cout << n << endl;
+
     if (n == 1) {
       break;
     } else if (n % 2 == 0) {
@@ -14,5 +18,6 @@ int main() {
       n = 3 * n + 1;
     }
   }
+
   return 0;
 }
